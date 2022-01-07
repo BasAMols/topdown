@@ -1,0 +1,84 @@
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Characters -->
+    <script type="text/javascript" src="characters/example-character.js"></script> 
+
+    <!-- Maps -->
+    <script type="text/javascript" src="map/example-level/example-level.js"></script>
+    <script type="text/javascript" src="map/example-indoor/example-indoor.js"></script>
+    <script type="text/javascript" src="map/dungeon/level-dungeon.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="class/settings.class.js"></script>
+    <script type="text/javascript" src="class/tools.class.js"></script>
+    <script type="text/javascript" src="class/view.class.js"></script>
+    <script type="text/javascript" src="class/keyhandling.class.js"></script>
+    <script type="text/javascript" src="class/movement.class.js"></script>
+    <script type="text/javascript" src="class/checks.class.js"></script>
+    <script type="text/javascript" src="class/canvas.class.js"></script>
+    <script type="text/javascript" src="class/animation.class.js"></script>
+    <script type="text/javascript" src="class/level.class.js"></script>
+    <script type="text/javascript" src="class/character.class.js"></script>
+    <script type="text/javascript" src="class/dev.class.js"></script>
+    <script type="text/javascript" src="class/action.class.js"></script>
+    <script type="text/javascript" src="class/loader.class.js"></script>
+
+    <style>
+        body{
+            margin: 0;
+            background-color: #272727;
+            height: 100vh;
+            overflow: hidden;
+            touch-action: manipulation;
+        }
+
+        /* Mobile buttons */
+        .buttonwrapper {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .buttonwrapper .button {
+            width: 100px;
+            height: 100px;
+            background: rgb(255 255 255 / 17%);
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+
+        .buttonwrapper .button.spacer {
+            background: transparent;
+            border: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="buttonwrapper">
+        <div class="button" id="upleft"></div>
+        <div class="button" id="up"></div>
+        <div class="button" id="upright"></div>
+        <div class="button" id="left"></div>
+        <div class="button spacer"></div>
+        <div class="button" id="right"></div>
+        <div class="button" id="downleft"></div>
+        <div class="button" id="down"></div>
+        <div class="button" id="downright"></div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,1230 @@
+{
+    "terrain": [
+        {
+            "X": "1",
+            "Y": "18",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "19",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "18",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "16",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "17",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "17",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "17",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "16",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "16",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "15",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "15",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "15",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "15",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "14",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "14",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "13",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "13",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "12",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "12",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "12",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "11",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "11",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "11",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "10",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "10",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "10",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "9",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "9",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "9",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "8",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "8",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "7",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "7",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "7",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "6",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "5",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "6",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "5",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "6",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "5",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "4",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "3",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "3",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "2",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "1",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "1",
+            "Y": "0",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "0",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "1",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "1",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "2",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "3",
+            "Y": "2",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "4",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "2",
+            "Y": "3",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "18",
+            "type": "terrain_dirt_1"
+        },
+        {
+            "X": "0",
+            "Y": "17",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "2",
+            "Y": "16",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "1",
+            "Y": "13",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "3",
+            "Y": "14",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "1",
+            "Y": "19",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "14",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "10",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "3",
+            "Y": "9",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "2",
+            "Y": "8",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "2",
+            "Y": "13",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "7",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "2",
+            "Y": "6",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "4",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "1",
+            "Y": "5",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "3",
+            "Y": "4",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "1",
+            "Y": "2",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "1",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "2",
+            "Y": "0",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "0",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "3",
+            "Y": "3",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "1",
+            "Y": "8",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "2",
+            "Y": "11",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "1",
+            "Y": "12",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "11",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "2",
+            "Y": "18",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "0",
+            "Y": "19",
+            "type": "terrain_dirt_2"
+        },
+        {
+            "X": "3",
+            "Y": "19",
+            "type": "terrain_dirt_2"
+        }
+    ],
+    "objects": [
+        {
+            "X": "2",
+            "Y": "19",
+            "type": "terrain_stone_3_17"
+        },
+        {
+            "X": "0",
+            "Y": "19",
+            "type": "terrain_stone_3_19"
+        },
+        {
+            "X": "3",
+            "Y": "19",
+            "type": "terrain_stone_3_20"
+        },
+        {
+            "X": "0",
+            "Y": "18",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "17",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "16",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "15",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "14",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "13",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "12",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "11",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "10",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "9",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "8",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "7",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "6",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "4",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "5",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "3",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "2",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "1",
+            "type": "terrain_stone_3_15"
+        },
+        {
+            "X": "0",
+            "Y": "0",
+            "type": "terrain_stone_3_25"
+        },
+        {
+            "X": "3",
+            "Y": "0",
+            "type": "terrain_stone_3_22"
+        },
+        {
+            "X": "1",
+            "Y": "0",
+            "type": "terrain_stone_3_2"
+        },
+        {
+            "X": "2",
+            "Y": "0",
+            "type": "terrain_stone_3_2"
+        },
+        {
+            "X": "3",
+            "Y": "1",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "2",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "3",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "4",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "5",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "6",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "7",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "8",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "9",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "10",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "11",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "12",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "13",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "14",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "15",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "16",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "17",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "3",
+            "Y": "18",
+            "type": "terrain_stone_3_13"
+        },
+        {
+            "X": "1",
+            "Y": "19",
+            "type": "terrain_stone_3_17"
+        }
+    ],
+    "decorations": [
+        {
+            "X": "1",
+            "Y": "18",
+            "type": "Inner_187"
+        },
+        {
+            "X": "1",
+            "Y": "17",
+            "type": "Inner_193"
+        },
+        {
+            "X": "3",
+            "Y": "1",
+            "type": "object_barrel_2"
+        },
+        {
+            "X": "3",
+            "Y": "2",
+            "type": "object_barrel_1"
+        },
+        {
+            "X": "1",
+            "Y": "0",
+            "type": "object_barrel_2"
+        },
+        {
+            "X": "1",
+            "Y": "1",
+            "type": "object_barrel_1"
+        },
+        {
+            "X": "0",
+            "Y": "2",
+            "type": "object_box_large_2"
+        },
+        {
+            "X": "2",
+            "Y": "4",
+            "type": "object_box_large_2"
+        },
+        {
+            "X": "3",
+            "Y": "5",
+            "type": "deco_sack"
+        },
+        {
+            "X": "2",
+            "Y": "1",
+            "type": "deco_sack"
+        },
+        {
+            "X": "3",
+            "Y": "0",
+            "type": "deco_skel_1"
+        },
+        {
+            "X": "2",
+            "Y": "0",
+            "type": "deco_skel_5"
+        },
+        {
+            "X": "0",
+            "Y": "6",
+            "type": "deco_chain_5"
+        },
+        {
+            "X": "1",
+            "Y": "3",
+            "type": "deco_chain_4"
+        },
+        {
+            "X": "1",
+            "Y": "9",
+            "type": "cannon_1"
+        },
+        {
+            "X": "3",
+            "Y": "8",
+            "type": "cannon_balls_2"
+        },
+        {
+            "X": "1",
+            "Y": "10",
+            "type": "cannon_balls_4"
+        },
+        {
+            "X": "1",
+            "Y": "4",
+            "type": "cannon_balls_1"
+        }
+    ],
+    "overlay": [
+        {
+            "X": "0",
+            "Y": "19",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "18",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "19",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "18",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "19",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "18",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "19",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "18",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "17",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "17",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "17",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "17",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "16",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "16",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "16",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "16",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "15",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "15",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "15",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "15",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "14",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "14",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "14",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "14",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "13",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "13",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "13",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "13",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "12",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "12",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "12",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "12",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "11",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "11",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "11",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "11",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "10",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "10",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "10",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "10",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "9",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "9",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "9",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "9",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "8",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "8",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "8",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "8",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "7",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "7",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "7",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "7",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "6",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "6",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "6",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "6",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "5",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "5",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "5",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "5",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "4",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "4",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "4",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "4",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "3",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "3",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "3",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "3",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "2",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "2",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "2",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "2",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "1",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "1",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "1",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "1",
+            "type": "shadow_9"
+        },
+        {
+            "X": "0",
+            "Y": "0",
+            "type": "shadow_9"
+        },
+        {
+            "X": "1",
+            "Y": "0",
+            "type": "shadow_9"
+        },
+        {
+            "X": "2",
+            "Y": "0",
+            "type": "shadow_9"
+        },
+        {
+            "X": "3",
+            "Y": "0",
+            "type": "shadow_9"
+        }
+    ],
+    "height": "20",
+    "width": "4",
+    "background": "#272727",
+    "sprites": [
+        {
+            "url": "map/sprite/overworld/terrain_dirt_1.png",
+            "name": "terrain_dirt_1"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_dirt_2.png",
+            "name": "terrain_dirt_2"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_17.png",
+            "name": "terrain_stone_3_17"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_19.png",
+            "name": "terrain_stone_3_19"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_20.png",
+            "name": "terrain_stone_3_20"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_15.png",
+            "name": "terrain_stone_3_15"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_25.png",
+            "name": "terrain_stone_3_25"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_22.png",
+            "name": "terrain_stone_3_22"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_2.png",
+            "name": "terrain_stone_3_2"
+        },
+        {
+            "url": "map/sprite/overworld/terrain_stone_3_13.png",
+            "name": "terrain_stone_3_13"
+        },
+        {
+            "url": "map/sprite/interior/Inner_187.png",
+            "name": "Inner_187"
+        },
+        {
+            "url": "map/sprite/interior/Inner_193.png",
+            "name": "Inner_193"
+        },
+        {
+            "url": "map/sprite/overworld/object_barrel_2.png",
+            "name": "object_barrel_2"
+        },
+        {
+            "url": "map/sprite/overworld/object_barrel_1.png",
+            "name": "object_barrel_1"
+        },
+        {
+            "url": "map/sprite/overworld/object_box_large_2.png",
+            "name": "object_box_large_2"
+        },
+        {
+            "url": "map/sprite/overworld/deco_sack.png",
+            "name": "deco_sack"
+        },
+        {
+            "url": "map/sprite/overworld/deco_skel_1.png",
+            "name": "deco_skel_1"
+        },
+        {
+            "url": "map/sprite/overworld/deco_skel_5.png",
+            "name": "deco_skel_5"
+        },
+        {
+            "url": "map/sprite/overworld/deco_chain_5.png",
+            "name": "deco_chain_5"
+        },
+        {
+            "url": "map/sprite/overworld/deco_chain_4.png",
+            "name": "deco_chain_4"
+        },
+        {
+            "url": "map/sprite/overworld/cannon_1.png",
+            "name": "cannon_1"
+        },
+        {
+            "url": "map/sprite/overworld/cannon_balls_2.png",
+            "name": "cannon_balls_2"
+        },
+        {
+            "url": "map/sprite/overworld/cannon_balls_4.png",
+            "name": "cannon_balls_4"
+        },
+        {
+            "url": "map/sprite/overworld/cannon_balls_1.png",
+            "name": "cannon_balls_1"
+        },
+        {
+            "url": "map/sprite/overworld/shadow_9.png",
+            "name": "shadow_9"
+        }
+    ]
+}
