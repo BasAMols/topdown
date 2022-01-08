@@ -3,7 +3,7 @@ var animation = {
     constructor() {
         this.interval = 0;
         this.intervalTimeout = 1; // Increase interval every X frames
-        this.maxinterval = 60; // Loop interval after X amounts
+        this.maxinterval = 30; // Loop interval after X amounts
     },
 
     rotation() {
@@ -138,23 +138,24 @@ var animation = {
                         this.interval = 0;
 
                     case 0: 
+                    case 30: 
                         character.active.interval = 0;
                         break;
 
-                    case 8: 
+                    case 6: 
                         character.active.interval = 1;
                         break;
 
-                    case 9: 
+                    case 12: 
                         character.active.interval = 2;
                         break;
 
-                    case 10: 
-                        character.active.interval = 1;
+                    case 18: 
+                        character.active.interval = 3;
                         break;
 
-                    case 11: 
-                        character.active.interval = 0;
+                    case 24: 
+                        character.active.interval = 4;
                         break;
 
                 }     
@@ -168,63 +169,28 @@ var animation = {
                         this.interval = 0;
 
                     case 0: 
-                    case 20: 
-                    case 40: 
+                    case 30: 
                         character.active.interval = 0;
                         break;
 
-                    case 2: 
-                    case 22: 
-                    case 42: 
+                    case 5: 
                         character.active.interval = 1;
                         break;
 
-                    case 4: 
-                    case 24: 
-                    case 44: 
+                    case 10: 
                         character.active.interval = 2;
                         break;
 
-                    case 6: 
-                    case 26: 
-                    case 46: 
+                    case 15: 
                         character.active.interval = 3;
                         break;
 
-                    case 8: 
-                    case 28: 
-                    case 48: 
+                    case 20: 
                         character.active.interval = 4;
                         break;
 
-                    case 10: 
-                    case 30: 
-                    case 50: 
+                    case 25: 
                         character.active.interval = 5;
-                        break;
-
-                    case 12: 
-                    case 32: 
-                    case 52: 
-                        character.active.interval = 6;
-                        break;
-
-                    case 14: 
-                    case 34: 
-                    case 54: 
-                        character.active.interval = 7;
-                        break;
-
-                    case 16: 
-                    case 36: 
-                    case 56: 
-                        character.active.interval = 8;
-                        break;
-
-                    case 18: 
-                    case 38: 
-                    case 58: 
-                        character.active.interval = 9;
                         break;
 
                 } 
