@@ -49,6 +49,9 @@ var action = {
                 movement.stopX();
                 movement.stopY();
 
+                // reset any action poses (attacks)
+                character.overwritePose = undefined;
+                
                 // Reset animation cycle
                 animation.rotation();
                 animation.cycle();
@@ -63,5 +66,11 @@ var action = {
         });
 
     },
+
+    attack(){
+        animation.interval = 0;
+        character.overwritePose = 'attack';
+
+    }
 
 }

@@ -118,83 +118,116 @@ var animation = {
         // timeline. We check for the pose, and then we cycle through the interval of the animation.
         // The renderer handles what graphic gets chosen in the character sheet.
 
-        
+        if(character.overwritePose !== undefined){
 
-        // First we check if a new pose has been selecter in order to start the animation interval from 0
-        if (character.active.oldpose != character.active.pose){
-            character.active.oldpose = character.active.pose;
-            character.active.interval = 0;
-        }
+            if (character.overwritePose == 'attack') {
 
-        if(game.framecount % this.intervalTimeout == 0){
+                if(game.framecount % this.intervalTimeout == 0){
+                    this.interval++;
 
-            this.interval++;
+                    switch (this.interval){
+                        case 1: 
+                            character.active.interval = 0;
+                            break;
 
-            // IDLE
-            if (character.active.pose == "idle"){
+                        case 3: 
+                            character.active.interval = 1;
+                            break;
 
-                switch (this.interval){
-                    case this.maxinterval + 1: 
-                        this.interval = 0;
+                        case 5: 
+                            character.active.interval = 2;
+                            break;
 
-                    case 0: 
-                    case 30: 
-                        character.active.interval = 0;
-                        break;
+                        case 7: 
+                            character.overwritePose = undefined; 
+                            break;
 
-                    case 6: 
-                        character.active.interval = 1;
-                        break;
 
-                    case 12: 
-                        character.active.interval = 2;
-                        break;
+                    }     
 
-                    case 18: 
-                        character.active.interval = 3;
-                        break;
-
-                    case 24: 
-                        character.active.interval = 4;
-                        break;
-
-                }     
+                }
+            
             }
 
-            // Walking
-            if (character.active.pose == "walk"){
+        } else {
 
-                switch (this.interval){
-                    case this.maxinterval + 1: 
-                        this.interval = 0;
+            // First we check if a new pose has been selecter in order to start the animation interval from 0
+            if (character.active.oldpose != character.active.pose){
+                character.active.oldpose = character.active.pose;
+                character.active.interval = 0;
+            }
 
-                    case 0: 
-                    case 30: 
-                        character.active.interval = 0;
-                        break;
+            if(game.framecount % this.intervalTimeout == 0){
 
-                    case 5: 
-                        character.active.interval = 1;
-                        break;
+                this.interval++;
 
-                    case 10: 
-                        character.active.interval = 2;
-                        break;
+                // IDLE
+                if (character.active.pose == "idle"){
 
-                    case 15: 
-                        character.active.interval = 3;
-                        break;
+                    switch (this.interval){
+                        case this.maxinterval + 1: 
+                            this.interval = 0;
 
-                    case 20: 
-                        character.active.interval = 4;
-                        break;
+                        case 0: 
+                        case 30: 
+                            character.active.interval = 0;
+                            break;
 
-                    case 25: 
-                        character.active.interval = 5;
-                        break;
+                        case 6: 
+                            character.active.interval = 1;
+                            break;
 
-                } 
-                    
+                        case 12: 
+                            character.active.interval = 2;
+                            break;
+
+                        case 18: 
+                            character.active.interval = 3;
+                            break;
+
+                        case 24: 
+                            character.active.interval = 4;
+                            break;
+
+                    }     
+                }
+
+                // Walking
+                if (character.active.pose == "walk"){
+
+                    switch (this.interval){
+                        case this.maxinterval + 1: 
+                            this.interval = 0;
+
+                        case 0: 
+                        case 30: 
+                            character.active.interval = 0;
+                            break;
+
+                        case 5: 
+                            character.active.interval = 1;
+                            break;
+
+                        case 10: 
+                            character.active.interval = 2;
+                            break;
+
+                        case 15: 
+                            character.active.interval = 3;
+                            break;
+
+                        case 20: 
+                            character.active.interval = 4;
+                            break;
+
+                        case 25: 
+                            character.active.interval = 5;
+                            break;
+
+                    } 
+                        
+                }
+
             }
 
         }

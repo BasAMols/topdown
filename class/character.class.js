@@ -3,6 +3,7 @@ var character = {
     constructor() {
         
         this.active = game.character;
+        overwritePose = undefined;
 
     },
 
@@ -45,7 +46,18 @@ var character = {
     // THIS FUNCTION DRAWS THE CHARACTER TO THE SCREEN
     drawCharacter() {
 
-        var pose = character.active.rendered_sprites[character.active.pose][character.active.rot][character.active.interval];
+        if (this.overwritePose !== undefined){
+
+            // Select overwrite pose if set
+            var pose = character.active.rendered_sprites[this.overwritePose][character.active.rot][character.active.interval];
+
+        } else {
+
+           // Select normal pose if this is undefined
+            var pose = character.active.rendered_sprites[character.active.pose][character.active.rot][character.active.interval];
+
+        }
+
 
         canvas.ctx.drawImage(
             pose,
