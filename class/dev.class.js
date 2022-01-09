@@ -140,7 +140,7 @@ var dev = {
     },
 
     drawTrigger() {
-        // Rendering Trigger square 
+        // Rendering warp square 
         level.active.event_trigger.warp.forEach(function(element) {
 
             canvas.ctx.fillStyle = "#FFFF0050";
@@ -152,9 +152,18 @@ var dev = {
             );
 
         });
-        for (x = 0; x < level.active.event_trigger.warp; x++) {
-            
 
-        }
+        // Rendering speech square 
+        level.active.event_trigger.speech.forEach(function(element) {
+
+            canvas.ctx.fillStyle = "#E6E6FA50";
+            canvas.ctx.fillRect(
+                (element.X * game.spriteRenderSize) - view.currentX,
+                canvas.PXheight - (element.Y * game.spriteRenderSize) + view.currentY,
+                (element.width * game.spriteRenderSize),
+                -(element.height * game.spriteRenderSize)
+            );
+
+        });
     }
 }

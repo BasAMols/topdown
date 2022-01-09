@@ -18,54 +18,54 @@ var keyhandling = {
         document.addEventListener('keydown', this.keyDown.bind(this));
 
         // On screen buttons
-        // var events = [
+        var events = [
 
-        //     // On screen buttons pressed on mobile
-        //     {id: "up",          action: "touch",     pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
-        //     {id: "left",        action: "touch",     pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
-        //     {id: "down",        action: "touch",     pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
-        //     {id: "right",       action: "touch",     pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
+            // On screen buttons pressed on mobile
+            {id: "up",          action: "touch",     pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
+            {id: "left",        action: "touch",     pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
+            {id: "down",        action: "touch",     pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
+            {id: "right",       action: "touch",     pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
 
-        //     // Angles buttons pressed on mobile
-        //     {id: "upleft",      action: "touch",     pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
-        //     {id: "upleft",      action: "touch",     pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
-        //     {id: "upright",     action: "touch",     pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
-        //     {id: "upright",     action: "touch",     pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
-        //     {id: "downleft",    action: "touch",     pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
-        //     {id: "downleft",    action: "touch",     pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
-        //     {id: "downright",   action: "touch",     pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
-        //     {id: "downright",   action: "touch",     pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
+            // Angles buttons pressed on mobile
+            {id: "upleft",      action: "touch",     pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
+            {id: "upleft",      action: "touch",     pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
+            {id: "upright",     action: "touch",     pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
+            {id: "upright",     action: "touch",     pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
+            {id: "downleft",    action: "touch",     pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
+            {id: "downleft",    action: "touch",     pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
+            {id: "downright",   action: "touch",     pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
+            {id: "downright",   action: "touch",     pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
 
-        //     // On screen buttons used on desktop
-        //     {id: "up",          action: "desktop",   pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
-        //     {id: "left",        action: "desktop",   pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
-        //     {id: "down",        action: "desktop",   pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
-        //     {id: "right",       action: "desktop",   pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
+            // On screen buttons used on desktop
+            {id: "up",          action: "desktop",   pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
+            {id: "left",        action: "desktop",   pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
+            {id: "down",        action: "desktop",   pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
+            {id: "right",       action: "desktop",   pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
 
-        //     // Angles buttons used on desktop for angles
-        //     {id: "upleft",      action: "desktop",   pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
-        //     {id: "upleft",      action: "desktop",   pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
-        //     {id: "upright",     action: "desktop",   pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
-        //     {id: "upright",     action: "desktop",   pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
-        //     {id: "downleft",    action: "desktop",   pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
-        //     {id: "downleft",    action: "desktop",   pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
-        //     {id: "downright",   action: "desktop",   pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
-        //     {id: "downright",   action: "desktop",   pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
+            // Angles buttons used on desktop for angles
+            {id: "upleft",      action: "desktop",   pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
+            {id: "upleft",      action: "desktop",   pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
+            {id: "upright",     action: "desktop",   pressFunction: this.pressUp,     releaseFunction: this.releaseUp},
+            {id: "upright",     action: "desktop",   pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
+            {id: "downleft",    action: "desktop",   pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
+            {id: "downleft",    action: "desktop",   pressFunction: this.pressLeft,   releaseFunction: this.releaseLeft},
+            {id: "downright",   action: "desktop",   pressFunction: this.pressDown,   releaseFunction: this.releaseDown},
+            {id: "downright",   action: "desktop",   pressFunction: this.pressRight,  releaseFunction: this.releaseRight},
 
-        // ];
+        ];
 
-        // for (i = 0; i < events.length; i++) { 
-        //     var event = events[i];
+        for (i = 0; i < events.length; i++) { 
+            var event = events[i];
 
-        //     if(event.action == 'touch'){
-        //         document.getElementById(event.id).addEventListener("touchstart", event.pressFunction.bind(this));       
-        //         document.getElementById(event.id).addEventListener("touchend", event.releaseFunction.bind(this));       
-        //     } else {
-        //         document.getElementById(event.id).addEventListener("mousedown", event.pressFunction.bind(this));       
-        //         document.getElementById(event.id).addEventListener("mouseup", event.releaseFunction.bind(this));       
+            if(event.action == 'touch'){
+                document.getElementById(event.id).addEventListener("touchstart", event.pressFunction.bind(this));       
+                document.getElementById(event.id).addEventListener("touchend", event.releaseFunction.bind(this));       
+            } else {
+                document.getElementById(event.id).addEventListener("mousedown", event.pressFunction.bind(this));       
+                document.getElementById(event.id).addEventListener("mouseup", event.releaseFunction.bind(this));       
 
-        //     }
-        // }
+            }
+        }
 
     },
 

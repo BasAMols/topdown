@@ -1,9 +1,9 @@
 var action = {
 
-    checkWarp() {
+    check() {
 
         // Check if we are in position to warp
-        warp = false;
+        warpPass = false;
         warpData = undefined;
         level.active.event_trigger.warp.forEach(function (element) {
 
@@ -18,22 +18,51 @@ var action = {
                 game.pos.nextY > yStart &&
                 game.pos.nextY + game.character.hitbox.X * game.characterRenderSize < yEnd
             ) {
-                warp = true;
+                warpPass = true;
                 warpData = element;
                 return;
             }
 
         });
 
-        if (warp) {
+        if (warpPass) {
 
-            this.warp(warpData);
+            this.doWarp(warpData);
+
+        }
+
+        // Check if we are in position to warp
+        speechPass = false;
+        speechData = undefined;
+        level.active.event_trigger.speech.forEach(function (element) {
+
+            var xStart = (element.X * game.spriteRenderSize);
+            var xEnd = (element.X * game.spriteRenderSize) + (element.width * game.spriteRenderSize);
+            var yStart = (element.Y * game.spriteRenderSize);
+            var yEnd = (element.Y * game.spriteRenderSize) + (element.height * game.spriteRenderSize);
+
+            if (
+                game.pos.nextX > xStart &&
+                game.pos.nextX + game.character.hitbox.X * game.characterRenderSize < xEnd &&
+                game.pos.nextY > yStart &&
+                game.pos.nextY + game.character.hitbox.X * game.characterRenderSize < yEnd
+            ) {
+                speechPass = true;
+                speechData = element;
+                return;
+            }
+
+        });
+
+        if (speechPass) {
+
+            this.doSpeech(speechData);
 
         }
 
     },
 
-    warp(warpData){
+    doWarp(warpData){
 
         // Give callback code to start again
         game.stop(function(){
@@ -51,7 +80,7 @@ var action = {
 
                 // reset any action poses (attacks)
                 character.overwritePose = undefined;
-                
+
                 // Reset animation cycle
                 animation.rotation();
                 animation.cycle();
@@ -64,6 +93,12 @@ var action = {
 
             });
         });
+
+    },
+
+    doSpeech(speechData){
+
+        speech.start(speechData.id);
 
     },
 

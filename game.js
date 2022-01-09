@@ -10,7 +10,7 @@ var game = {
         this.spriteSize         = 16;
         this.spriteRenderSize   = this.zoom * this.spriteSize;
 
-        this.character          = exampleCharacter;
+        this.character          = char_new;
         this.characterSize      = 1;
         this.characterRenderSize= this.zoom * this.characterSize;
 
@@ -100,10 +100,11 @@ var game = {
         character.drawCharacter();
         level.drawOverlay();
 
-        action.checkWarp();
+        action.check();
 
         dev.activator();
 
+        speech.loop();
 
     },
 

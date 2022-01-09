@@ -97,6 +97,16 @@ var exampleLevel = {
                     Y: 1,
                 } 
             },  // Entering house
+        ],
+
+        speech : [
+            {
+                X:  8, 
+                Y:  11, 
+                width: 1, 
+                height: 1, 
+                id: 'testtalk'
+            }
         ]
     },
 
