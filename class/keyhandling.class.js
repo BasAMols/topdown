@@ -98,6 +98,10 @@ var keyhandling = {
                     this.pressAttack();
                     break;
 
+                case "Enter":
+                    this.pressSkip();
+                    break;
+
                 // Toggle DEV view
                 case "p":
                     settings.dev = !settings.dev;
@@ -236,6 +240,12 @@ var keyhandling = {
             }
         }
 
+    },
+
+    pressSkip() {
+        if (speech.active){
+            speech.cycle();
+        }
     },
 
     // BUTTON RELEASE EVENTS

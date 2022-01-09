@@ -5,61 +5,68 @@ var action = {
         // Check if we are in position to warp
         warpPass = false;
         warpData = undefined;
-        level.active.event_trigger.warp.forEach(function (element) {
+        if(level.active.event_trigger.warp){
 
-            var xStart = (element.X * game.spriteRenderSize);
-            var xEnd = (element.X * game.spriteRenderSize) + (element.width * game.spriteRenderSize);
-            var yStart = (element.Y * game.spriteRenderSize);
-            var yEnd = (element.Y * game.spriteRenderSize) + (element.height * game.spriteRenderSize);
+            level.active.event_trigger.warp.forEach(function (element) {
 
-            if (
-                game.pos.nextX > xStart &&
-                game.pos.nextX + game.character.hitbox.X * game.characterRenderSize < xEnd &&
-                game.pos.nextY > yStart &&
-                game.pos.nextY + game.character.hitbox.X * game.characterRenderSize < yEnd
-            ) {
-                warpPass = true;
-                warpData = element;
-                return;
+                var xStart = (element.X * game.spriteRenderSize);
+                var xEnd = (element.X * game.spriteRenderSize) + (element.width * game.spriteRenderSize);
+                var yStart = (element.Y * game.spriteRenderSize);
+                var yEnd = (element.Y * game.spriteRenderSize) + (element.height * game.spriteRenderSize);
+
+                if (
+                    game.pos.nextX > xStart &&
+                    game.pos.nextX + game.character.hitbox.X * game.characterRenderSize < xEnd &&
+                    game.pos.nextY > yStart &&
+                    game.pos.nextY + game.character.hitbox.X * game.characterRenderSize < yEnd
+                ) {
+                    warpPass = true;
+                    warpData = element;
+                    return;
+                }
+
+            });
+
+            if (warpPass) {
+
+                this.doWarp(warpData);
+    
             }
 
-        });
-
-        if (warpPass) {
-
-            this.doWarp(warpData);
-
         }
+
 
         // Check if we are in position to warp
         speechPass = false;
         speechData = undefined;
-        level.active.event_trigger.speech.forEach(function (element) {
+        if(level.active.event_trigger.speech){
+            
+            level.active.event_trigger.speech.forEach(function (element) {
 
-            var xStart = (element.X * game.spriteRenderSize);
-            var xEnd = (element.X * game.spriteRenderSize) + (element.width * game.spriteRenderSize);
-            var yStart = (element.Y * game.spriteRenderSize);
-            var yEnd = (element.Y * game.spriteRenderSize) + (element.height * game.spriteRenderSize);
+                var xStart = (element.X * game.spriteRenderSize);
+                var xEnd = (element.X * game.spriteRenderSize) + (element.width * game.spriteRenderSize);
+                var yStart = (element.Y * game.spriteRenderSize);
+                var yEnd = (element.Y * game.spriteRenderSize) + (element.height * game.spriteRenderSize);
+    
+                if (
+                    game.pos.nextX > xStart &&
+                    game.pos.nextX + game.character.hitbox.X * game.characterRenderSize < xEnd &&
+                    game.pos.nextY > yStart &&
+                    game.pos.nextY + game.character.hitbox.X * game.characterRenderSize < yEnd
+                ) {
+                    speechPass = true;
+                    speechData = element;
+                    return;
+                }
+    
+            });
 
-            if (
-                game.pos.nextX > xStart &&
-                game.pos.nextX + game.character.hitbox.X * game.characterRenderSize < xEnd &&
-                game.pos.nextY > yStart &&
-                game.pos.nextY + game.character.hitbox.X * game.characterRenderSize < yEnd
-            ) {
-                speechPass = true;
-                speechData = element;
-                return;
+            if (speechPass) {
+
+                this.doSpeech(speechData);
+    
             }
-
-        });
-
-        if (speechPass) {
-
-            this.doSpeech(speechData);
-
         }
-
     },
 
     doWarp(warpData){
@@ -71,8 +78,8 @@ var action = {
             level.loadJson(level.active.JSON, function () {
                 
                 // Setting our start position
-                game.pos.currentX = (warpData.spawn.X * game.spriteRenderSize) + (character.active.hitboxoffset.X * 2);
-                game.pos.currentY = (warpData.spawn.Y * game.spriteRenderSize) + (character.active.hitboxoffset.Y);
+                game.pos.currentX = (warpData.spawn.X * game.spriteRenderSize) + ((game.spriteSize - character.active.hitbox.X) / 2 * game.zoom);
+                game.pos.currentY = (warpData.spawn.Y * game.spriteRenderSize) + ((game.spriteSize - character.active.hitbox.Y) / 2 * game.zoom);
 
                 // Stop our movement
                 movement.stopX();

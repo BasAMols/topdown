@@ -37,6 +37,7 @@ var game = {
         keyhandling.constructor();
         movement.constructor();
         level.constructor();
+        speech.constructor();
 
         // Load the level
         level.loadJson(level.active.JSON, function(){

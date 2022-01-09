@@ -101,10 +101,10 @@ var exampleLevel = {
 
         speech : [
             {
-                X:  8, 
+                X:  7.5, 
                 Y:  11, 
-                width: 1, 
-                height: 1, 
+                width: 2, 
+                height: 2, 
                 id: 'testtalk'
             }
         ]

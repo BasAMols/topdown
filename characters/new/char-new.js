@@ -7,7 +7,7 @@ var char_new = {
         Y: 14,
     },
     hitboxoffset: {
-        X: 27,
+        X: 26,
         Y: 32,
     },
     rot: 180,

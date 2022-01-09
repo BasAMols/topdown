@@ -1,26 +1,70 @@
 var speech = {
 
-    active: false,
+    constructor() {
 
-    bubbleColor: undefined,
-    bubbleFont: "30px Arial",
-    bubbleFontColor: "#000000",
+        this.active = false;
 
-    textCurrent: undefined,
-    textInterval: 0,
+        this.bubble = {
+            size: {
+                width: canvas.PXwidth - 20,
+                height: 150,
+            },
+            pos: {
+                X: 10,
+                Y: canvas.PXheight - 150 - 10,
+            },
+            color: "#000000",
+            font: "24px Nanum Gothic Coding",
+            fontColor: "#ffffff",
+            padding: 20,
+            lineHeight: 26,
+        };
 
-    fadeState: "none",
-    fadeInterval: 0,
-    fadeMax: 20,
-    
-    list: {
+        this.text = {
+            object: undefined,
+            current: undefined,
+            currentChar: undefined,
+            currentLine: 0,
+            currentCycle: 0,
+            state: "none",
+            cycles: [ //TODO dynamically generate these from object
+                [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    "Fusce fermentum rhoncus est, et interdum mauris pharetra sit amet.",
+                    "Suspendisse laoreet nisi ut sapien dapibus fermentum.",
+                ],
+                [
+                    "Suspendisse sodales leo vitae ultricies luctus.",
+                    "Class aptent taciti sociosqu ad litora torquent per conubia nostra",
+                    "per inceptos himenaeos. Vestibulum ac ante interdum.",
+                ],
+                [
+                    "eleifend velit non, finibus neque. Nullam ac vulputate justo",
+                    "ac tincidunt felis. Vivamus blandit augue eu volutpat tincidunt",
+                    "Etiam tristique justo eros, eget blandit mi hendrerit ut.",
+                ],
+                [
+                    "Nunc efficitur massa ligula, sollicitudin viverra sapien tristique vitae",
+                    "Aenean volutpat diam id tempor lacinia. Nulla facilisis diam tortor",
+                    "eget tempor magna auctor lacinia.",
+                ],
+            ],
+        };
 
-        testtalk: {
-            text: "Welcome to the bridge",
-            stop: false,
-            single: false,
-            triggered: false,
-        },
+        this.fadeState = "none";
+        this.fadeInterval = 0;
+        this.fadeMax = 20;
+        
+        this.list = {
+
+            testtalk: {
+                text: "",
+                stop: false,
+                single: true,
+                triggered: false,
+            },
+
+        };
 
     },
 
@@ -38,7 +82,8 @@ var speech = {
                     object.triggered = true;
                     this.active = true;
                     this.fadeState = "starting";
-                    this.textCurrent = object;
+                    this.text.state = "none";
+                    this.text.object = object;
                 }
 
             }
@@ -51,18 +96,48 @@ var speech = {
 
     cycle() {
 
+        if (this.text.state == "active"){
+
+            if ( this.text.currentCycle < this.text.cycles.length - 1){
+                // Go to next cycle
+                this.text.currentCycle++;
+                this.text.currentLine = 0;
+                this.text.currentChar = 0;
+                this.text.state = "ticking";
+
+            } else {
+                this.stop();
+            }
+
+        } else {
+
+            // Skip the text cycle
+            this.text.partial = this.text.cycles[this.text.currentCycle][this.text.currentLine];
+            this.text.currentLine = this.text.cycles[this.text.currentCycle].length - 1
+            this.text.state = "active"
+
+        }
+
     },
 
     stop() {
         this.fadeState = "stopping";
-        this.textCurrent = undefined;
+
+        // Reset all variables
+        this.text.object = undefined;
+        this.text.partial = undefined;
+        this.text.currentCycle = 0;
+        this.text.currentLine = 0;
+        this.text.currentChar = 0;
+        this.text.state = "none";
     },
 
     fadeIn() {
 
         this.fadeInterval++;
-        var opacity = this.fadeInterval / this.fadeMax
-        this.bubbleColor = "rgba(255,255,255," + opacity + ")";
+        var opacity = this.fadeInterval / this.fadeMax,
+        opacity = tools.range (opacity, 0, 0.8);
+        this.bubble.color = "rgba(0,0,0," + opacity + ")";
 
         // STOP FADING
         if(this.fadeInterval == this.fadeMax){
@@ -76,7 +151,8 @@ var speech = {
 
         this.fadeInterval++;
         var opacity = 1 - (this.fadeInterval / this.fadeMax);
-        this.bubbleColor = "rgba(255,255,255," + opacity + ")";
+        opacity = tools.range (opacity, 0, 0.8);
+        this.bubble.color = "rgba(0,0,0," + opacity + ")";
         this.fadeState = "out";
 
         // STOP FADING
@@ -110,7 +186,7 @@ var speech = {
 
                 case "active": 
                     this.drawBubble();
-                    this.drawSpeech();
+                    this.textLoop();
                 break;
 
                 case "stopping": 
@@ -129,25 +205,113 @@ var speech = {
         }
     },
 
+    textLoop() {
+        if (this.active) {
+            switch (this.text.state) {
+                case "none": 
+                    this.text.currentChar = 0;
+                    this.text.partial = ""
+                    this.text.state = "ticking"
+                break;
+
+                case "ticking": 
+                    var line = this.text.cycles[this.text.currentCycle][this.text.currentLine];
+                    this.text.currentChar++;
+                    this.text.partial = line.substring(0, this.text.currentChar);
+
+                    this.drawSpeech();
+
+                    if (this.text.currentChar == line.length){
+                        this.text.state = "checkLine";
+                    }
+                break;
+
+                case "checkLine":
+
+                    if (this.text.currentLine != this.text.cycles[this.text.currentCycle].length - 1){
+                        // Go to next line
+                        this.text.currentLine++;
+                        this.text.currentChar = 0;
+                        this.text.partial = ""
+                        this.text.state = "ticking";
+                    } else {
+                        // Current cycle is done.
+                        this.text.state = "active";
+                    }
+
+                    this.drawSpeech();
+                break;
+
+                case "active": 
+                    this.drawSpeech();
+                break;
+            }
+
+        }
+    },
+
     drawBubble() {
-        canvas.ctx.fillStyle = this.bubbleColor;
+        canvas.ctx.fillStyle = this.bubble.color;
         canvas.ctx.fillRect(
-            0,
-            0,
-            canvas.PXwidth,
-            100  
+            this.bubble.pos.X,
+            this.bubble.pos.Y,
+            this.bubble.size.width,
+            this.bubble.size.height  
         );
     },
 
     drawSpeech() {
 
-        canvas.ctx.font = this.bubbleFont;
-        canvas.ctx.fillStyle = this.bubbleFontColor;
-        canvas.ctx.fillText(
-            this.textCurrent.text, 
-            10, 
-            50
-        );
+        for (let lineNR = 0; lineNR < this.text.cycles[this.text.currentCycle].length; lineNR++) {
+            var line = this.text.cycles[this.text.currentCycle][lineNR];
+            var text = undefined;
+
+            if (lineNR < this.text.currentLine || this.text.state == "active" ){
+
+                var text = line;
+
+            } else if (lineNR == this.text.currentLine){
+
+                var text = this.text.partial + " ..";
+               
+            }       
+
+            if (text !== undefined){
+
+                canvas.ctx.font = this.bubble.font;
+                canvas.ctx.fillStyle = this.bubble.fontColor;
+                canvas.ctx.fillText(
+                    text, 
+                    this.bubble.pos.X + this.bubble.padding, 
+                    this.bubble.pos.Y + this.bubble.padding + 14 + (this.bubble.lineHeight * (lineNR + 1) )
+    
+                );
+
+            }
+
+            // Draw tooltip text
+            canvas.ctx.font = "14px Nanum Gothic Coding";
+            canvas.ctx.fillStyle = this.bubble.fontColor;
+            canvas.ctx.fillText(
+                "Press ENTER to proceed", 
+                this.bubble.pos.X + ( this.bubble.padding ), 
+                this.bubble.pos.Y + ( this.bubble.padding + 14)
+            );
+
+        }
+
+       
+
+
+            
+
+        // canvas.ctx.font = this.bubble.font;
+        // canvas.ctx.fillStyle = this.bubble.fontColor;
+        // canvas.ctx.fillText(
+        //     this.text.current, 
+        //     10, 
+        //     50
+        // );
 
     },
 
