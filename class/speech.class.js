@@ -74,8 +74,7 @@ var speech = {
                         var cycle = cycles[i];
                         var cycleArray = []
 
-                        for (let j = 0; j < 10; j++) { 
-                            
+                        for (let j = 1; j < 11; j++) { 
 
                             if (cycle.length > this.text.characterCount){
 
@@ -110,7 +109,7 @@ var speech = {
 
                     // Set height op block dependant on text.maxLines
                     if (this.text.maxLines > 0) {
-                        this.bubble.size.height = (this.bubble.padding * 2) + 14 + ( ( this.text.maxLines + 1) * this.bubble.lineHeight);
+                        this.bubble.size.height = (this.bubble.padding * 2) + 14 + ( this.text.maxLines * this.bubble.lineHeight);
                         this.bubble.pos.Y = canvas.PXheight - this.bubble.size.height - 10
 
                         // Set starting values
