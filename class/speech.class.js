@@ -16,6 +16,7 @@ var speech = {
             color: "#000000",
             font: "24px Nanum Gothic Coding",
             fontColor: "#ffffff",
+            letterWidth: 12,
             padding: 20,
             lineHeight: 26,
         };
@@ -27,29 +28,13 @@ var speech = {
             currentLine: 0,
             currentCycle: 0,
             state: "none",
-            cycles: [ //TODO dynamically generate these from object
-                [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                    "Fusce fermentum rhoncus est, et interdum mauris pharetra sit amet.",
-                    "Suspendisse laoreet nisi ut sapien dapibus fermentum.",
-                ],
-                [
-                    "Suspendisse sodales leo vitae ultricies luctus.",
-                    "Class aptent taciti sociosqu ad litora torquent per conubia nostra",
-                    "per inceptos himenaeos. Vestibulum ac ante interdum.",
-                ],
-                [
-                    "eleifend velit non, finibus neque. Nullam ac vulputate justo",
-                    "ac tincidunt felis. Vivamus blandit augue eu volutpat tincidunt",
-                    "Etiam tristique justo eros, eget blandit mi hendrerit ut.",
-                ],
-                [
-                    "Nunc efficitur massa ligula, sollicitudin viverra sapien tristique vitae",
-                    "Aenean volutpat diam id tempor lacinia. Nulla facilisis diam tortor",
-                    "eget tempor magna auctor lacinia.",
-                ],
-            ],
+            cycles: [],
+            characterCount: undefined,
+            maxLines: 0,
         };
+
+        // Define maximum amount of characters in a line
+        this.text.characterCount = Math.floor( (this.bubble.size.width - (this.bubble.padding * 2) ) / this.bubble.letterWidth );
 
         this.fadeState = "none";
         this.fadeInterval = 0;
@@ -58,7 +43,7 @@ var speech = {
         this.list = {
 
             testtalk: {
-                text: "",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Fusce fermentum rhoncus est, et interdum mauris pharetr Suspendisse laoreet nisi ut sapien dapibus fermentum.|Suspendisse sodales leo vitae ultricies luctus. Class aptent taciti sociosqu ad litora torquent per per inceptos himenaeos. Vestibulum ac ante interdum.|eleifend velit non, finibus neque. Nullam ac vulputate justo ac tincidunt felis. Vivamus blandit augue eu volutpat tincidunt Etiam tristique justo eros, eget blandit mi hendrerit ut.|Nunc efficitur massa ligula, sollicitudin viverra sapien tristique vitae Aenean volutpat diam id tempor lacinia. Nulla facilisis diam tortor eget tempor magna auctor lacinia.",
                 stop: false,
                 single: true,
                 triggered: false,
@@ -72,18 +57,72 @@ var speech = {
 
         if (this.list[id]){
 
-            var object = this.list[id];
+            this.text.object = this.list[id];
 
             // Dont trigger if the bubble should only be seen once, and has already been seen.
-            if (!object.single || !object.triggered){
+            if (!this.text.object.single || !this.text.object.triggered){
 
                 // Only trigger if another bubble isnt alread visible
                 if (this.fadeState == "none"){
-                    object.triggered = true;
-                    this.active = true;
-                    this.fadeState = "starting";
-                    this.text.state = "none";
-                    this.text.object = object;
+
+                    this.text.maxLines = 0;
+
+                    // Break cycle into lines
+                    var cycles = this.text.object.text.split("|");
+                    for (let i = 0; i < cycles.length; i++) {
+
+                        var cycle = cycles[i];
+                        var cycleArray = []
+
+                        for (let j = 0; j < 10; j++) { 
+                            
+
+                            if (cycle.length > this.text.characterCount){
+
+                                // If the remaining text is longer than the maximum amount of characters
+                                // split into multiple lines.
+                                var line = cycle.substring(0,this.text.characterCount);
+                                var breakpoint = line.lastIndexOf(' ');
+                                if (breakpoint != -1) {
+                                    var line = cycle.substring(0,breakpoint);
+                                }
+
+                                cycleArray.push(line);
+                                cycle = cycle.substring(breakpoint).trim();
+
+                            } else {
+
+                                if (j > this.text.maxLines){
+                                    this.text.maxLines = j
+                                }
+                                cycleArray.push(cycle);
+                                break;
+
+                            }
+
+                        }
+
+                        this.text.cycles.push(cycleArray);
+
+                    }
+
+
+
+                    // Set height op block dependant on text.maxLines
+                    if (this.text.maxLines > 0) {
+                        this.bubble.size.height = (this.bubble.padding * 2) + 14 + ( ( this.text.maxLines + 1) * this.bubble.lineHeight);
+                        this.bubble.pos.Y = canvas.PXheight - this.bubble.size.height - 10
+
+                        // Set starting values
+                        this.text.object.triggered = true;
+                        this.active = true;
+                        this.fadeState = "starting";
+                        this.text.state = "none";
+
+                    } else {
+                        console.warn('No lines: ' + id);
+                    }
+
                 }
 
             }
@@ -299,19 +338,6 @@ var speech = {
             );
 
         }
-
-       
-
-
-            
-
-        // canvas.ctx.font = this.bubble.font;
-        // canvas.ctx.fillStyle = this.bubble.fontColor;
-        // canvas.ctx.fillText(
-        //     this.text.current, 
-        //     10, 
-        //     50
-        // );
 
     },
 
