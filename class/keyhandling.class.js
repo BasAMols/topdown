@@ -98,6 +98,7 @@ var keyhandling = {
                     this.pressAttack();
                     break;
 
+                case "e":
                 case "Enter":
                     this.pressSkip();
                     break;

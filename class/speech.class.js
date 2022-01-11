@@ -38,7 +38,7 @@ var speech = {
 
         this.fadeState = "none";
         this.fadeInterval = 0;
-        this.fadeMax = 20;
+        this.fadeMax = 10;
         
         this.list = {
 
@@ -331,7 +331,7 @@ var speech = {
             canvas.ctx.font = "14px Nanum Gothic Coding";
             canvas.ctx.fillStyle = this.bubble.fontColor;
             canvas.ctx.fillText(
-                "Press ENTER to proceed", 
+                "Press ENTER or E to proceed", 
                 this.bubble.pos.X + ( this.bubble.padding ), 
                 this.bubble.pos.Y + ( this.bubble.padding + 14)
             );

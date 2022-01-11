@@ -70,7 +70,6 @@ var movement = {
 
             } else {
                 // Stopped
-                console.log(check);
 
                 // this.hitX(check);
                 // this.animateX();

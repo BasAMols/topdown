@@ -60,6 +60,12 @@ var dev = {
                 canvas.ctx.shadowOffsetY  = 2;
 
                 canvas.ctx.fillText(
+                    y * game.spriteRenderSize, 
+                    x * game.spriteRenderSize - view.currentX, 
+                    canvas.PXheight - (y * game.spriteRenderSize - view.currentY + 36)
+                );
+
+                canvas.ctx.fillText(
                     'x:'+ x, 
                     x * game.spriteRenderSize - view.currentX, 
                     canvas.PXheight - (y * game.spriteRenderSize - view.currentY + 20)

@@ -85,15 +85,13 @@ var level = {
 
                 var X = tile.X * game.spriteRenderSize - view.currentX
                 var Y = tile.Y * game.spriteRenderSize - view.currentY + game.spriteRenderSize
-                
+
                 canvas.ctx.drawImage(
                     level.active.rendered_sprites[tile.type], 
                     X, 
                     canvas.PXheight - Y
                 );
-                
             }
-
         }
        
         if (settings.renderObjects){
@@ -111,7 +109,6 @@ var level = {
                     canvas.PXheight - Y
                 );
             }
-            
         }
 
         if (settings.renderDecorations){
@@ -129,9 +126,7 @@ var level = {
                     canvas.PXheight - Y
                 );
             }
-            
         }
-
     },
 
     drawOverlay(){
